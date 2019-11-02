@@ -9,7 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <link rel="alternate" href="/atom.xml" title="函数变量" type="application/atom+xml">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -21,7 +20,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '7.5.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
@@ -51,17 +50,17 @@
   };
 </script>
 
-  <meta name="description" content="Mac 中文输入 Emacs 键位设置 解决中文输入时用 Emacs 快捷键移动光标跳出输入法的问题  Karabiner Elements 设置指南相信有很多人都会像我一样改变MacBook的键位，其中最常见的应该是把 Caps 键修改为 Control ，这也符合 HHBK 键盘的逻辑，这样修改之方便解锁很多新姿势，比如用 Control + p&#x2F;n&#x2F;b&#x2F;f 来实现上下左右的移动。 但是有个问">
+  <meta name="description" content="解决中文输入时用 Emacs 快捷键移动光标跳出输入法的问题">
 <meta name="keywords" content="Mac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac_Change_Key">
+<meta property="og:title" content="Mac 中文输入 Emacs 键位设置">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;Mac-Change-Key&#x2F;index.html">
 <meta property="og:site_name" content="函数变量">
-<meta property="og:description" content="Mac 中文输入 Emacs 键位设置 解决中文输入时用 Emacs 快捷键移动光标跳出输入法的问题  Karabiner Elements 设置指南相信有很多人都会像我一样改变MacBook的键位，其中最常见的应该是把 Caps 键修改为 Control ，这也符合 HHBK 键盘的逻辑，这样修改之方便解锁很多新姿势，比如用 Control + p&#x2F;n&#x2F;b&#x2F;f 来实现上下左右的移动。 但是有个问">
+<meta property="og:description" content="解决中文输入时用 Emacs 快捷键移动光标跳出输入法的问题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;xinni&#x2F;macOS-setup&#x2F;blob&#x2F;master&#x2F;Pictrues&#x2F;karabiner_Set.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;xinni&#x2F;macOS-setup&#x2F;blob&#x2F;master&#x2F;Pictrues&#x2F;karabiner_Cmplex.png">
-<meta property="og:updated_time" content="2019-11-02T05:25:01.229Z">
+<meta property="og:updated_time" content="2019-11-02T18:48:20.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;xinni&#x2F;macOS-setup&#x2F;blob&#x2F;master&#x2F;Pictrues&#x2F;karabiner_Set.png">
 
@@ -79,7 +78,7 @@
   };
 </script>
 
-  <title>Mac_Change_Key | 函数变量</title>
+  <title>Mac 中文输入 Emacs 键位设置 | 函数变量</title>
   
 
 
@@ -148,6 +147,21 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
@@ -182,7 +196,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/Mac-Change-Key/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="Xin Ni">
       <meta itemprop="description" content="">
     </span>
@@ -192,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Mac_Change_Key
+          Mac 中文输入 Emacs 键位设置
         </h1>
 
         <div class="post-meta">
@@ -203,10 +217,36 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-11-02 01:22:24 / 修改时间：01:25:01" itemprop="dateCreated datePublished" datetime="2019-11-02T01:22:24-04:00">2019-11-02</time>
+              <time title="创建时间：2019-11-02 01:22:24 / 修改时间：14:48:20" itemprop="dateCreated datePublished" datetime="2019-11-02T01:22:24-04:00">2019-11-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+            <div class="post-description">解决中文输入时用 Emacs 快捷键移动光标跳出输入法的问题</div>
 
         </div>
       </header>
@@ -217,10 +257,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Mac-中文输入-Emacs-键位设置"><a href="#Mac-中文输入-Emacs-键位设置" class="headerlink" title="Mac 中文输入 Emacs 键位设置"></a>Mac 中文输入 Emacs 键位设置</h1><blockquote>
-<p>解决中文输入时用 Emacs 快捷键移动光标跳出输入法的问题</p>
-</blockquote>
-<h2 id="Karabiner-Elements-设置指南"><a href="#Karabiner-Elements-设置指南" class="headerlink" title="Karabiner Elements 设置指南"></a>Karabiner Elements 设置指南</h2><p>相信有很多人都会像我一样改变MacBook的键位，其中最常见的应该是把 Caps 键修改为 Control ，这也符合 HHBK 键盘的逻辑，这样修改之方便解锁很多新姿势，比如用 Control + p/n/b/f 来实现上下左右的移动。</p>
+        <h2 id="Karabiner-Elements-设置指南"><a href="#Karabiner-Elements-设置指南" class="headerlink" title="Karabiner Elements 设置指南"></a>Karabiner Elements 设置指南</h2><p>相信有很多人都会像我一样改变MacBook的键位，其中最常见的应该是把 Caps 键修改为 Control ，这也符合 HHBK 键盘的逻辑，这样修改之方便解锁很多新姿势，比如用 Control + p/n/b/f 来实现上下左右的移动。</p>
 <p>但是有个问题一直让我十分不解，Mac 中是默认支持使用 Control + p/n/b/f 来实现上下左右光标的移动。但在使用输入法输入时，会有错误。比如在拼音输入的时候不小心输错一个，想用 Control + h 进行退格，然而这样的组合键会直接跳出输入法；再比如在拼音选字的时候，我们可以使用方向键来展开拼音的更多选项，并选择，但是如果想用 Control + p/n/b/f 来选择，也会跳出输入法。这给我造成了很大的困扰，再加之 Mac 上自带的输入法换页键还是反人类的 [ 和 ] ，对于右小指半残的我来说无异于更增加了难度，于是我一直寻求一种方式来改变这种尴尬的情形，最近我通过 Karabiner Elements 这个软件改善了这个问题。</p>
 <p>Karabiner Elements 是一个非常强大的改键软件，并且是免费开源的，可以去<a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="noopener">官网</a>下载。但缺点是，你熟悉了自己的一套设定，在用公共电脑工作时，或者帮别人 debug 时，会很不舒服。不过想解决这个问题只能是自己随身带一个存储着自己习惯的键盘了。</p>
 <h3 id="简易设置"><a href="#简易设置" class="headerlink" title="简易设置"></a>简易设置</h3><p>安装完 karabiner-element 以后，要达成 capslock 变成 left_ctrl 这件事非常简单，只要通过 GUI 界面设定即可。</p>
@@ -307,14 +344,14 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac-中文输入-Emacs-键位设置"><span class="nav-number">1.</span> <span class="nav-text">Mac 中文输入 Emacs 键位设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Karabiner-Elements-设置指南"><span class="nav-number">1.1.</span> <span class="nav-text">Karabiner Elements 设置指南</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简易设置"><span class="nav-number">1.1.1.</span> <span class="nav-text">简易设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Complex-Modifications"><span class="nav-number">1.1.2.</span> <span class="nav-text">设置 Complex Modifications</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Karabiner-Elements-设置指南"><span class="nav-number">1.</span> <span class="nav-text">Karabiner Elements 设置指南</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简易设置"><span class="nav-number">1.1.</span> <span class="nav-text">简易设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Complex-Modifications"><span class="nav-number">1.2.</span> <span class="nav-text">设置 Complex Modifications</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="site-author-image" itemprop="image" alt="Xin Ni"
-    src="/images/avatar.gif">
+    src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Xin Ni</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -327,17 +364,20 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
-  <div class="feed-link motion-element">
-    <a href="/atom.xml" rel="alternate">
-      <i class="fa fa-rss"></i>RSS
-    </a>
-  </div>
 
 
 
@@ -363,12 +403,17 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Xin Ni</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">NaNm</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">NaN:aN</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.5.0
-  </div>
 
         
 
@@ -389,11 +434,13 @@
   </div>
 
   
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
 
 
