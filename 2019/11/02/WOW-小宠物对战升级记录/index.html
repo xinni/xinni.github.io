@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="此文适用于魔兽世界 8.0 版本《争霸艾泽拉斯》，是比较早写的攻略，现在已经 AFK 一段时间了，所以文中的 TODO 可能不会再更新了...">
+<meta name="keywords" content="游戏,WOW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“WOW 8.0 小宠物对战升级记录”">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95&#x2F;index.html">
+<meta property="og:site_name" content="函数变量">
+<meta property="og:description" content="此文适用于魔兽世界 8.0 版本《争霸艾泽拉斯》，是比较早写的攻略，现在已经 AFK 一段时间了，所以文中的 TODO 可能不会再更新了...">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E9%9C%9C%E7%81%AB%E5%B2%AD.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E8%85%90%E5%8C%96.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E5%A4%BA%E6%97%A5%E8%80%85.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E9%AD%82%E4%BA%8C%E5%B8%A6%E4%B8%80%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E9%BB%84%E7%8C%AB%E4%BA%8C%E5%B8%A6%E4%B8%80.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E8%AE%BE%E7%BD%AE1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E8%AE%BE%E7%BD%AE2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E9%87%8D%E9%87%8F%E7%BA%A7.png">
+<meta property="og:updated_time" content="2019-11-02T23:33:44.631Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Users&#x2F;xinni&#x2F;Documents&#x2F;Blog&#x2F;xinni.github.io&#x2F;source&#x2F;_posts&#x2F;WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets&#x2F;%E9%9C%9C%E7%81%AB%E5%B2%AD.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/11/02/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>“WOW 8.0 小宠物对战升级记录” | 函数变量</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151358199-1"></script>
+    <script>
+      var host = window.location.hostname;
+      if (host !== "localhost" || !true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-151358199-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">函数变量</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">x</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Xin Ni">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="函数变量">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          “WOW 8.0 小宠物对战升级记录”
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-11-02 19:23:45 / Modified: 19:33:44" itemprop="dateCreated datePublished" datetime="2019-11-02T19:23:45-04:00">2019-11-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Game/" itemprop="url" rel="index">
+                    <span itemprop="name">Game</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Game/WOW/" itemprop="url" rel="index">
+                    <span itemprop="name">WOW</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>6.3k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>12 mins.</span>
+            </span>
+            <div class="post-description">此文适用于魔兽世界 8.0 版本《争霸艾泽拉斯》，是比较早写的攻略，现在已经 AFK 一段时间了，所以文中的 TODO 可能不会再更新了...</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本攻略尽可能详细的记录了我在小宠物升级过程中的准备，及各种资料查询。其中总结了来自于 NGA 的很多帖子，也包含一部分自己的研究，希望可以为想要拿传承护甲，或者想无脑升级人士提供便利。</p>
+<p>// 此文适用于魔兽世界 8.0 版本《争霸艾泽拉斯》，是比较早写的攻略，现在已经 AFK 一段时间了，所以文中的 TODO 可能不会再更新了…</p>
+<h2 id="一-插件准备"><a href="#一-插件准备" class="headerlink" title="一. 插件准备"></a>一. 插件准备</h2><p>插件可从 Twitch 上下载。</p>
+<h3 id="rematch"><a href="#rematch" class="headerlink" title="rematch"></a>rematch</h3><p>核心插件之一，功能很多，还在探索当中。</p>
+<p>可实现自动换队，升级序列等操作。</p>
+<p><strong>需注意：如果需要自动换队功能，需要对插件进行修改。</strong></p>
+<h3 id="tdBattlePetScript"><a href="#tdBattlePetScript" class="headerlink" title="tdBattlePetScript"></a>tdBattlePetScript</h3><p>核心插件之一，用以实现宠物对战自动化，此处自动化指对于宠物对战制定合理的策略，编写 script 来实现无脑按同一按键进行宠物对战。</p>
+<p>为帮助想要自制脚本的同学放上<a href="https://github.com/DengSir/tdBattlePetScript" target="_blank" rel="noopener">项目 GitHub 链接</a>，插件的介绍以及 API 都可在其中查询。</p>
+<h3 id="BreedID"><a href="#BreedID" class="headerlink" title="BreedID"></a>BreedID</h3><p>提供宠物攻速、血量的属性信息，抓宠时需要</p>
+<p>宠物品质介绍:</p>
+<p>P — Power</p>
+<p>S — Speed</p>
+<p>B — Balance</p>
+<p>H — Health</p>
+<h2 id="二-准备工作"><a href="#二-准备工作" class="headerlink" title="二. 准备工作"></a>二. 准备工作</h2><p>小宠物对战升级所需的大部分宠物都可在拍卖行购得，但需注意自己至少有一个 25 级宠物才能直接购买添加 25 级宠物。</p>
+<p>如果没有 25 级宠物，最快速的拿到 25 级宠物方案是升级三级要塞，在宠物小屋接任务，完成后可拿到一个直接提升宠物为 25 级的石头。</p>
+<h5 id="戴米多斯的仆从-（必备）"><a href="#戴米多斯的仆从-（必备）" class="headerlink" title="戴米多斯的仆从 （必备）"></a>戴米多斯的仆从 （必备）</h5><p>影月谷高地稀有掉落，稀有怪刷新时间在 1 ～ 3 小时，一天只有一次拾取，且掉落不定，建议直接拍卖行购买 25 级蓝色品质。约 20000G。</p>
+<h5 id="黄猫（必备）"><a href="#黄猫（必备）" class="headerlink" title="黄猫（必备）"></a>黄猫（必备）</h5><p>艾尔文森林购买，可建联盟试玩号，出暴风城购买，但买到的为 1 级绿色品质，需升级升品。黄猫为整个方案比较关键的一只宠物，可以用 //TODO 替代。建议有条件直接在拍卖行购买 25 级蓝色品质。约 15000G。</p>
+<h5 id="腐化的小助手（可选）"><a href="#腐化的小助手（可选）" class="headerlink" title="腐化的小助手（可选）"></a>腐化的小助手（可选）</h5><p>一级拍卖行价格在 7000G 左右，可以买一级宠练到 25 级，与戴米，黄猫组队单局平均约为 50s。</p>
+<h5 id="夺日者微型哨兵（可选）"><a href="#夺日者微型哨兵（可选）" class="headerlink" title="夺日者微型哨兵（可选）"></a>夺日者微型哨兵（可选）</h5><p>拍卖行价格在 5000G 左右，如果觉得腐化小助手太贵可以用此替代，与戴米和黄猫组队单局平均约为 60s。</p>
+<h5 id="邪恶之魂（可选）"><a href="#邪恶之魂（可选）" class="headerlink" title="邪恶之魂（可选）"></a>邪恶之魂（可选）</h5><p>Icc 掉落，拍卖行可以购买。人宠双练时带一级小宠用，与机械野猪二选一。</p>
+<h5 id="机械野猪（可选）"><a href="#机械野猪（可选）" class="headerlink" title="机械野猪（可选）"></a>机械野猪（可选）</h5><p>拍卖行购买，价格 2000 左右。人宠双练使用，与邪恶之魂二选一。</p>
+<h2 id="三-1-110-升级方案"><a href="#三-1-110-升级方案" class="headerlink" title="三. 1 ~ 110 升级方案"></a>三. 1 ~ 110 升级方案</h2><p>理论上霜火岭可以一直升级到 120 级，但是 110 级以后效率明显降低，110 ～ 120 大约需要 12 小时，而重量级只需大约一半的时间。推荐使用重量级野兽方案。</p>
+<p>队伍配置分纯人物升级方案和二带一人宠双升方案，因为 110 级以后刷重量级野兽需要一些新宠，所以建议在升级的过程当中也升级一些以后要用的宠物。</p>
+<h3 id="快速到达霜火岭"><a href="#快速到达霜火岭" class="headerlink" title="快速到达霜火岭"></a>快速到达霜火岭</h3><p>建立一个 110 级试玩的术士号，两人利用血槌熔渣矿井副本的集合石拉试玩术士到达霜火岭，一起到达升级地点，术士起门，将待升级小号拉过来。</p>
+<p>或者找法师帮忙开一个阿什兰的传送门，再找一个可以德拉诺飞行的基友带过去。</p>
+<p>//TODO：替换图片</p>
+<p><img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E9%9C%9C%E7%81%AB%E5%B2%AD.png" alt="霜火岭"></p>
+<h3 id="队伍配置"><a href="#队伍配置" class="headerlink" title="队伍配置"></a>队伍配置</h3><h5 id="腐化的小助手-黄猫-戴米多斯的仆从"><a href="#腐化的小助手-黄猫-戴米多斯的仆从" class="headerlink" title="腐化的小助手 + 黄猫 + 戴米多斯的仆从"></a>腐化的小助手 + 黄猫 + 戴米多斯的仆从</h5><p>稳定队伍，基本实现永动。理想状态下小助手 25s 内即可秒掉前两个对手。黄猫用来对付小动物，戴米用以对战飞行，且都具备回复能力。单局平均约 50s。</p>
+<p>技能搭配及脚本：</p>
+<p><img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E8%85%90%E5%8C%96.png" alt="腐化"> </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">if [self(腐化的小助手).active]</span><br><span class="line">    ability(#2) [!enemy(#3).active]</span><br><span class="line">    ability(#3)</span><br><span class="line">    ability(#1) [enemy(#1).active]</span><br><span class="line">    ability(#1) [enemy.hp&lt;=353]</span><br><span class="line">    change(戴米多斯的仆从) [enemy.type=飞行]</span><br><span class="line">    change(黄猫) [enemy.type=小动物]</span><br><span class="line">    ability(#1)</span><br><span class="line">    change(next) [self.dead]</span><br><span class="line">endif</span><br><span class="line">if [self(戴米多斯的仆从).active]</span><br><span class="line">    change(黄猫) [enemy.type=小动物]</span><br><span class="line">    ability(#2) [self(#2).hp&lt;700]</span><br><span class="line">    ability(#1) [enemy.aura(格挡).exists]</span><br><span class="line">    ability(#2) [enemy.hp&lt;=347]</span><br><span class="line">    ability(#1) [enemy.hp&lt;=328 &amp;!enemy.aura(蜷伏).exists]</span><br><span class="line">    ability(#1) [enemy.hp&lt;=492 &amp;enemy.type=飞行]</span><br><span class="line">    ability(#1) [enemy.hp&lt;164]</span><br><span class="line">    ability(#3)</span><br><span class="line">    ability(#1)</span><br><span class="line">    change(next) [self.dead]</span><br><span class="line">endif</span><br><span class="line">if [self(黄猫).active]</span><br><span class="line">    change(戴米多斯的仆从) [ enemy.type =飞行 &amp; self(戴米多斯的仆从).hp&gt;=315 ]</span><br><span class="line">    ability(#3) [enemy.hp&lt;=609 &amp; !enemy.aura(蜷伏).exists ] </span><br><span class="line">    ability(#3) [enemy.hp&lt;=406 &amp; enemy.aura(蜷伏).exists ] </span><br><span class="line">    ability(#2) [!self.aura(减速).exists &amp; !enemy.aura(减速).exists &amp; enemy.speed&gt;275 ] </span><br><span class="line">    ability(#2) [self.aura(减速).exists &amp; !enemy.aura(减速).exists &amp; enemy.speed&lt;276 ] </span><br><span class="line">    ability(#2) [enemy.hp&lt;=676 &amp; !enemy.aura(蜷伏).exists ] </span><br><span class="line">    ability(#1)</span><br><span class="line">endif</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+
+<h5 id="夺日者微型哨兵-戴米多斯的仆从-黄猫"><a href="#夺日者微型哨兵-戴米多斯的仆从-黄猫" class="headerlink" title="夺日者微型哨兵 + 戴米多斯的仆从 + 黄猫"></a>夺日者微型哨兵 + 戴米多斯的仆从 + 黄猫</h5><p>技能搭配及脚本：</p>
+<p><img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E5%A4%BA%E6%97%A5%E8%80%85.png" alt="夺日者"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ability(#2) [round=1]</span><br><span class="line">change(#2) [enemy.type=飞行]</span><br><span class="line">change(#3) [enemy.type=小动物]</span><br><span class="line">ability(#2) [self(#2).active&amp;self.hp&lt;=900]</span><br><span class="line">ability(#1) [self(#2).active&amp;self.hp&gt;900]</span><br><span class="line">change(#3) [self.aura(Mechanical).duration&gt;0]</span><br><span class="line">change(#3) [enemy.type=小动物&amp;self(#3).hp&gt;300]</span><br><span class="line">change(#2) [enemy.type=飞行&amp;self(#2).hp&gt;400]</span><br><span class="line">ability(#1) [enemy.type=飞行&amp;self(#2).active]</span><br><span class="line">ability(#3) [self(#3).active&amp;enemy.hp&lt;600]</span><br><span class="line">change(next) [self.dead]</span><br><span class="line">ability(#1)</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+
+<p>//TODO: 优化这组字符串及技能</p>
+<h5 id="邪恶之魂-戴米多斯的仆从-一级二带一方案"><a href="#邪恶之魂-戴米多斯的仆从-一级二带一方案" class="headerlink" title="邪恶之魂 + 戴米多斯的仆从 一级二带一方案"></a>邪恶之魂 + 戴米多斯的仆从 一级二带一方案</h5><p>待升级宠物一级即可，缺点是此方案中邪恶之魂攻击有限，基本是戴米一挑三，翻车几率较大，建议只用此队将一级小宠物提升至五级。</p>
+<p>在霜火岭打一局基本就可将一级宠物提升至五级，可以设置队伍的等级上限为四级，便不需要手动换宠。</p>
+<p>第二个栏位为升级宠物。</p>
+<p>右键点选第二个栏位，然后选择”将要升级的宠物放在这个栏位”，插件就会自动升级在升级队列中的第一个宠物，满级之后会自动移除升级队列。</p>
+<p>技能搭配及脚本：</p>
+<p><img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E9%AD%82%E4%BA%8C%E5%B8%A6%E4%B8%80%E8%AE%BE%E7%BD%AE.png" alt="魂二带一设置"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">quit [ self(戴米多斯的仆从).dead &amp; round=1 ]</span><br><span class="line">change(#2) [ self(#1).dead &amp; !self(#2).played ] </span><br><span class="line">change(#3) [self(#2).played]</span><br><span class="line">change(#1) [ self(#3).dead ] </span><br><span class="line">ability(#2) [round = 1 &amp; self(#3).hpp&lt;55]</span><br><span class="line">ability(#2) [round = 1 &amp; self(#1).hpp&lt;30]</span><br><span class="line">ability(#1) [round = 1]</span><br><span class="line">ability(#3) [round = 2]</span><br><span class="line">ability(#1) [enemy.aura(格挡).exists ]</span><br><span class="line">ability(#2) [ self(#3).active ]</span><br><span class="line">ability(#1) [enemy.hp&lt;492 &amp; enemy.type=飞行]</span><br><span class="line">ability(#1) [enemy.hp&lt;328 &amp; !enemy.aura(蜷伏).exists]</span><br><span class="line">ability(#1) [enemy.hp&lt;164]</span><br><span class="line">ability(#3) [ self(#3).active ] </span><br><span class="line">ability(#1)</span><br></pre></td></tr></table></figure>
+
+<h5 id="机械野猪-一级二带一"><a href="#机械野猪-一级二带一" class="headerlink" title="机械野猪 一级二带一"></a>机械野猪 一级二带一</h5><p>//TODO</p>
+<h5 id="黄猫-戴米多斯的仆从-二带一方案"><a href="#黄猫-戴米多斯的仆从-二带一方案" class="headerlink" title="黄猫 + 戴米多斯的仆从 二带一方案"></a>黄猫 + 戴米多斯的仆从 二带一方案</h5><p>队伍比较稳定，基本实现永动，效率尚可。此方案不适用于一级宠物练级，需要先用邪恶之魂队伍提升至五级再使用此队伍。</p>
+<p>第一个栏位为升级宠物。</p>
+<p>技能搭配及脚本：</p>
+<p><img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E9%BB%84%E7%8C%AB%E4%BA%8C%E5%B8%A6%E4%B8%80.png" alt="黄猫二带一"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">quit [ self(戴米多斯的仆从).dead &amp; enemy(#3).hpp&gt;80 &amp; enemy(#3).type =飞行 ] </span><br><span class="line">quit [ self(#1).dead ] </span><br><span class="line">ability(#1) [ self(#1).active &amp; round=1 ] </span><br><span class="line">change(next) [ self.played &amp; self.level&lt;25 ] </span><br><span class="line">change(黄猫) [ enemy(#3).type =飞行 &amp; self(戴米多斯的仆从).hp&lt;315 &amp; !self(戴米多斯的仆从).ability(心能虹吸).usable ] </span><br><span class="line">change(戴米多斯的仆从) [ enemy.type =飞行 &amp; self(戴米多斯的仆从).hp&gt;=315 ] </span><br><span class="line">change(黄猫) [ enemy.type =小动物 ] </span><br><span class="line">change(#2) [ self(#3).dead ] </span><br><span class="line">change(next) [ self.dead ] </span><br><span class="line">ability(#1) [enemy.aura(格挡).exists ] </span><br><span class="line">ability(#2) [ self(戴米多斯的仆从).active &amp; self(戴米多斯的仆从).hp&lt;676 ] </span><br><span class="line">ability(#3) [ self(戴米多斯的仆从).active &amp; enemy(#2).type =飞行 &amp; enemy(#1).active ] </span><br><span class="line">ability(#2) [ self(戴米多斯的仆从).active &amp; self(戴米多斯的仆从).hp&lt;850 ] </span><br><span class="line">ability(#1) [ self(戴米多斯的仆从).active &amp; enemy.hp&lt;492 &amp; enemy.type=飞行] </span><br><span class="line">ability(#1) [ self(戴米多斯的仆从).active &amp; enemy.hp&lt;328 &amp; !enemy.aura(蜷伏).exists] </span><br><span class="line">ability(#1) [ self(戴米多斯的仆从).active &amp; enemy.hp&lt;164] </span><br><span class="line">ability(#3) [ self(戴米多斯的仆从).active ] </span><br><span class="line">ability(#2) [ self(戴米多斯的仆从).active &amp; self(戴米多斯的仆从).hp&lt;900 ] </span><br><span class="line">ability(#3) [ self(黄猫).active &amp; enemy.hp&lt;=609 &amp; !enemy.aura(蜷伏).exists ] </span><br><span class="line">ability(#3) [ self(黄猫).active &amp; enemy.hp&lt;=406 &amp; enemy.aura(蜷伏).exists ] </span><br><span class="line">ability(#2) [ self(黄猫).active &amp; !self.aura(减速).exists &amp; !enemy.aura(减速).exists &amp; enemy.speed&gt;275 ] </span><br><span class="line">ability(#2) [ self(黄猫).active &amp; self.aura(减速).exists &amp; !enemy.aura(减速).exists &amp; enemy.speed&lt;276 ] </span><br><span class="line">ability(#2) [ self(黄猫).active &amp; enemy.hp&lt;=676 &amp; !enemy.aura(蜷伏).exists ] </span><br><span class="line">ability(#1)</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><h5 id="宏命令"><a href="#宏命令" class="headerlink" title="宏命令"></a>宏命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/cast 复活战斗宠物</span><br><span class="line">/target 冰脊幼崽</span><br><span class="line">/script SelectGossipOption(1)</span><br></pre></td></tr></table></figure>
+
+<p>添加此宏并放到鼠标向下滚动</p>
+<p>ESC - 按键设置 - 选中目标 - 与目标互动设置为 鼠标向上滚动</p>
+<p>界面 - 插件 - tdBattleScript 中设置自动按钮快捷键为 鼠标向上滚动</p>
+<h2 id="四-110-～-120-升级方案"><a href="#四-110-～-120-升级方案" class="headerlink" title="四. 110 ～ 120 升级方案"></a>四. 110 ～ 120 升级方案</h2><p>可选择的方案有许多，这里我只实验了一种，宠物相对比较平民，且速度不错，所以只列出这一种方案。</p>
+<h3 id="重量级野兽"><a href="#重量级野兽" class="headerlink" title="重量级野兽"></a>重量级野兽</h3><p>重量级野兽是军团版本的一个世界任务，位置在风暴峡湾。任务需要挑战两位训练师，只要不去打牛，我们便可无限打熊。</p>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>升级号需至少 110 级。完成军团版本的前置任务，前置任务比较复杂故只给出流程链接（只要有一个号做过就可跳过前置，直接到达拉然）。还需注意前置任务这里，因为奥格瑞玛现在位面混乱，非常容易出现无法找到任务 NPC 这种情况。只能通过联系 GM 填写表单解决。单个表单平均解决时间 20 小时。建议此处联系 GM 时直接请他帮忙推进到达拉然。</p>
+<p>到达破碎群岛达拉然拿到炉石后去找卡德加，完成<strong>联合力量</strong>任务，解锁世界任务。</p>
+<p>此时地图的鸟点是不解锁的，如果想要自己去风暴峡湾需要开启职业大厅，然后做完一个场景战役才能到达风暴峡湾，推荐使用位于风暴峡湾的英灵殿副本集合石，或者找一个开了飞行的大号带过去。</p>
+<h4 id="队伍设置"><a href="#队伍设置" class="headerlink" title="队伍设置"></a>队伍设置</h4><h5 id="嚎叫离子炮队："><a href="#嚎叫离子炮队：" class="headerlink" title="嚎叫离子炮队："></a>嚎叫离子炮队：</h5><p>1号嚎叫宠 (281+速度的霜狼幼崽/狐狸等) + 2号嚎叫宠 (281+速度，与1号不同种类，1号死后替补) + 德莱尼微型防御者 (<strong>2轮，极速22秒</strong>，使用宠物最少的高速升级方案！<strong>只要1队</strong>)</p>
+<p>只要1个队，并设为种子队(选中NPC-右键重命名或改变目标-目标选择“瑞迪尔”)。4-5只快速嚎叫宠即可 (2种不同嚎叫宠，各2只，或3+1，或3+2均可。1号位放一种，2号位放另一种。rematch选项里面 勾选“加载血量最高的宠物”，如果抓的宠物属性不同(比如SB和BB等混合)，下面“Allow Any Version”也打勾)，这样打完会自动换血量较高的同种宠物，不用换队，简单高效之极。</p>
+<p><img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E8%AE%BE%E7%BD%AE1.png" alt="设置1">)<img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E8%AE%BE%E7%BD%AE2.png" alt="设置2"></p>
+<p>狐狸可以去风暴峡湾、至高岭，昆莱山等地图抓，281+速度的，抓3只名字一样的(嚎叫宠，总共3-5只就够用)。德莱尼理论上可以只用一个，由于是机械，永远不死；只是3个更效率，大大减少机械复生动画时间。</p>
+<p>德莱尼微型防御者价格在 10000G 左右，这里理论上可以用其他有离子炮技能的宠物代替。但我没有多余宠物，此处未经测试。</p>
+<p>技能随意，只需保证有嚎叫和离子炮即可。</p>
+<p>如果用其他宠物请将代码中的德莱尼微型防御者替换为宠物名字，其余可保持不变。</p>
+<p><img src="/Users/xinni/Documents/Blog/xinni.github.io/source/_posts/WOW-%E5%B0%8F%E5%AE%A0%E7%89%A9%E5%AF%B9%E6%88%98%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95.assets/%E9%87%8D%E9%87%8F%E7%BA%A7.png" alt="重量级"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">quit [self(德莱尼微型防御者).active &amp; round=<span class="number">1</span>] </span><br><span class="line">change(德莱尼微型防御者) [enemy.aura(嚎叫).exists] </span><br><span class="line">change(next) [self.dead] </span><br><span class="line">ability(嚎叫) </span><br><span class="line">ability(离子炮) </span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置-1"><a href="#设置-1" class="headerlink" title="设置"></a>设置</h4><h5 id="宏命令-1"><a href="#宏命令-1" class="headerlink" title="宏命令"></a>宏命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/施放 复活战斗宠物(战斗宠物) </span><br><span class="line">/target 瑞迪尔 </span><br><span class="line">/script SelectGossipOption(1)</span><br></pre></td></tr></table></figure>
+
+<p>// TODO</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag"># 游戏</a>
+              <a href="/tags/WOW/" rel="tag"># WOW</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/02/Mac-Change-Key/" rel="next" title="Mac 中文输入 Emacs 键位设置">
+                  <i class="fa fa-chevron-left"></i> Mac 中文输入 Emacs 键位设置
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-插件准备"><span class="nav-number">1.</span> <span class="nav-text">一. 插件准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#rematch"><span class="nav-number">1.1.</span> <span class="nav-text">rematch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tdBattlePetScript"><span class="nav-number">1.2.</span> <span class="nav-text">tdBattlePetScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BreedID"><span class="nav-number">1.3.</span> <span class="nav-text">BreedID</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-准备工作"><span class="nav-number">2.</span> <span class="nav-text">二. 准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#戴米多斯的仆从-（必备）"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">戴米多斯的仆从 （必备）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#黄猫（必备）"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">黄猫（必备）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#腐化的小助手（可选）"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">腐化的小助手（可选）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#夺日者微型哨兵（可选）"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">夺日者微型哨兵（可选）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#邪恶之魂（可选）"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">邪恶之魂（可选）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#机械野猪（可选）"><span class="nav-number">2.0.0.6.</span> <span class="nav-text">机械野猪（可选）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-1-110-升级方案"><span class="nav-number">3.</span> <span class="nav-text">三. 1 ~ 110 升级方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速到达霜火岭"><span class="nav-number">3.1.</span> <span class="nav-text">快速到达霜火岭</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队伍配置"><span class="nav-number">3.2.</span> <span class="nav-text">队伍配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#腐化的小助手-黄猫-戴米多斯的仆从"><span class="nav-number">3.2.0.1.</span> <span class="nav-text">腐化的小助手 + 黄猫 + 戴米多斯的仆从</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#夺日者微型哨兵-戴米多斯的仆从-黄猫"><span class="nav-number">3.2.0.2.</span> <span class="nav-text">夺日者微型哨兵 + 戴米多斯的仆从 + 黄猫</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#邪恶之魂-戴米多斯的仆从-一级二带一方案"><span class="nav-number">3.2.0.3.</span> <span class="nav-text">邪恶之魂 + 戴米多斯的仆从 一级二带一方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#机械野猪-一级二带一"><span class="nav-number">3.2.0.4.</span> <span class="nav-text">机械野猪 一级二带一</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#黄猫-戴米多斯的仆从-二带一方案"><span class="nav-number">3.2.0.5.</span> <span class="nav-text">黄猫 + 戴米多斯的仆从 二带一方案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置"><span class="nav-number">3.3.</span> <span class="nav-text">设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#宏命令"><span class="nav-number">3.3.0.1.</span> <span class="nav-text">宏命令</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-110-～-120-升级方案"><span class="nav-number">4.</span> <span class="nav-text">四. 110 ～ 120 升级方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重量级野兽"><span class="nav-number">4.1.</span> <span class="nav-text">重量级野兽</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备工作"><span class="nav-number">4.1.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队伍设置"><span class="nav-number">4.1.2.</span> <span class="nav-text">队伍设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#嚎叫离子炮队："><span class="nav-number">4.1.2.1.</span> <span class="nav-text">嚎叫离子炮队：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置-1"><span class="nav-number">4.1.3.</span> <span class="nav-text">设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#宏命令-1"><span class="nav-number">4.1.3.1.</span> <span class="nav-text">宏命令</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="Xin Ni"
+    src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Xin Ni</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xin Ni</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="Symbols count total">10k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">19 mins.</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
